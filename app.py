@@ -4,6 +4,28 @@ from services.chunker import chunk_text_by_tokens, count_tokens
 from services.summarizer import summarize_chunk, merge_summaries
 from concurrent.futures import ThreadPoolExecutor
 
+import streamlit as st
+
+def check_password():
+    def password_entered():
+        if st.session_state["password"] == st.secrets["APP_PASSWORD"]:
+            st.session_state["password_correct"] = True
+        else:
+            st.session_state["password_correct"] = False
+
+    if "password_correct" not in st.session_state:
+        st.text_input("Enter Password", type="password", key="password", on_change=password_entered)
+        return False
+    elif not st.session_state["password_correct"]:
+        st.text_input("Enter Password", type="password", key="password", on_change=password_entered)
+        st.error("Incorrect password")
+        return False
+    else:
+        return True
+
+if not check_password():
+    st.stop()
+
 st.set_page_config(page_title="YouTube Notes Generator",layout="wide")
 st.title("📘 YouTube Structered Notes Generator")
 st.write("Generate dynamically structered tehcnical documentation from subtitle-enabled videos")
