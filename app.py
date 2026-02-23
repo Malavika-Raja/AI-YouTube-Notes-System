@@ -4,8 +4,6 @@ from services.chunker import chunk_text_by_tokens, count_tokens
 from services.summarizer import summarize_chunk, merge_summaries
 from concurrent.futures import ThreadPoolExecutor
 
-import streamlit as st
-
 def check_password():
     def password_entered():
         if st.session_state["password"] == st.secrets["APP_PASSWORD"]:
