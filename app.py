@@ -3,10 +3,23 @@ from services.transcript import get_transcript_from_url, TranscriptError
 from services.chunker import chunk_text_by_tokens, count_tokens
 from services.summarizer import summarize_chunk, merge_summaries
 from concurrent.futures import ThreadPoolExecutor
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+def get_app_password():
+    try:
+        return st.secrets["APP_PASSWORD"]
+    except Exception:
+        pass
+
+    return os.getenv("APP_PASSWORD")
 
 def check_password():
+    APP_PASSWORD = get_app_password()
     def password_entered():
-        if st.session_state["password"] == st.secrets["APP_PASSWORD"]:
+        if st.session_state["password"] == APP_PASSWORD:
             st.session_state["password_correct"] = True
         else:
             st.session_state["password_correct"] = False
