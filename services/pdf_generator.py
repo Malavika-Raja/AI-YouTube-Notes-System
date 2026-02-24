@@ -6,10 +6,8 @@ from reportlab.platypus import (
     ListFlowable,
     ListItem
 )
-from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
-from reportlab.lib import colors
+from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib.units import inch
-from reportlab.platypus import ListFlowable
 from reportlab.lib.pagesizes import A4
 from io import BytesIO
 
