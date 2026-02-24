@@ -15,8 +15,6 @@ This project demonstrates an optimized LLM processing pipeline designed for:
 - Clean streaming user experience
 - Modular service-layer architecture
 
-The application is deployed via Streamlit Community Cloud.
-
 ---
 
 ## Core Features
