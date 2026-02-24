@@ -31,7 +31,7 @@ This project demonstrates an optimized LLM processing pipeline designed for:
 
 ## Demo
 
-![Demo Recording](demo/demo-recording.mp4)
+![Demo Recording](demo/StreamlitUI.png)
 
 ## Tech Stack
 
