@@ -31,7 +31,7 @@ This project demonstrates an optimized LLM processing pipeline designed for:
 
 ## Demo
 
-![Demo Recording](assests/demo-recording.mp4)
+![Demo Recording](demo/demo-recording.mp4)
 
 ## Tech Stack
 
