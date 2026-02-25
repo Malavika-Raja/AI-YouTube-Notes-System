@@ -83,6 +83,6 @@ streamlit run app.py
 
 ## Performance Strategy
 
-The application reduces latency by parallelizing chunk-level API calls while preserving deterministic output order. Streaming is applied during the final document synthesis stage to ensure clarity and structured presentation.
+The application reduces latency by parallelizing chunk-level API calls while preserving deterministic output order. Streaming is applied during the final document generation stage to ensure clarity and structured presentation.
 
 
