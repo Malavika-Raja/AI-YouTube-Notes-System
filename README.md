@@ -29,7 +29,7 @@ This project demonstrates an optimized LLM processing pipeline designed for:
 
 ---
 
-## Demo
+## Streamlit UI
 
 ![Demo Recording](demo/StreamlitUI.png)
 
